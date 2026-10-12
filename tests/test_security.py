@@ -14,6 +14,8 @@ def test_flags_sql_percent_formatting():
     assert len(findings) == 1
     assert findings[0].severity == "high"
     assert "SQL injection" in findings[0].message
+    assert findings[0].rule_id == "AG-SQL-001"
+    assert findings[0].diff_line_number == 1
 
 
 def test_flags_f_string_execute():

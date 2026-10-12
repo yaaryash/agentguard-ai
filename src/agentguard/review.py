@@ -13,6 +13,8 @@ class ReviewFinding:
     file_path: str
     severity: str
     message: str
+    rule_id: str = "AG-GENERAL-001"
+    diff_line_number: int | None = None
 
 
 def validate_review_input(review_input: ReviewInput) -> None:
